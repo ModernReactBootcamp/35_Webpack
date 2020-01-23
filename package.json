@@ -1,0 +1,25 @@
+{
+  "name": "37_WebPack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ModernReactBootcamp/35_Webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ModernReactBootcamp/35_Webpack/issues"
+  },
+  "homepage": "https://github.com/ModernReactBootcamp/35_Webpack#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
