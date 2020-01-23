@@ -52,7 +52,54 @@
     (r.p = ''),
     r((r.s = 0));
 })([
-  function(e, t) {
-    alert('hello from webpack');
+  function(e, t, r) {
+    'use strict';
+    r.r(t);
+    const n = (...e) => e.every(e => 'number' == typeof e && !isNaN(e));
+    const o = new (class {
+        constructor() {
+          this.errorBox = document.getElementById('error');
+        }
+        handleAdditionError(e, t) {
+          const r = e.reduce(
+            (e, r, o) => (n(t[o]) ? e + '' : e + `${r} is not a number`),
+            'Please, enter two valid numbers!'
+          );
+          this.errorBox.classList.remove('invisible'),
+            (this.errorBox.innerText = r);
+        }
+        hideErrors() {
+          this.errorBox.classList.add('invisible');
+        }
+      })(),
+      u = new (class {
+        constructor() {
+          (this.numberOneInput = document.getElementById('numberOne')),
+            (this.numberTwoInput = document.getElementById('numberTwo')),
+            (this.addValuesButton = document.getElementById('addValues')),
+            (this.resultDiv = document.getElementById('result'));
+        }
+        getInputs() {
+          return [this.numberOneInput.value, this.numberTwoInput.value];
+        }
+        setResult(e) {
+          this.resultDiv.innerText = e;
+        }
+        onClick(e) {
+          this.addValuesButton.addEventListener('click', e);
+        }
+      })();
+    var s, i;
+    (i = u),
+      (s = o).hideErrors(),
+      i.onClick(() => {
+        s.hideErrors();
+        const e = i.getInputs(),
+          t = ((...e) => e.map(e => parseInt(e)))(...e);
+        if (n(...t)) {
+          const [e, r] = t;
+          i.setResult(e + r);
+        } else i.setResult(''), s.handleAdditionError(e, t);
+      });
   }
 ]);
