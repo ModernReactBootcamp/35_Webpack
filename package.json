@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/ModernReactBootcamp/35_Webpack#readme",
   "devDependencies": {
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
