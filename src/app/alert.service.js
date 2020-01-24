@@ -11,7 +11,7 @@ export class AlertService {
       } else {
         return message + `${str} is not a number`;
       }
-    }, 'Please, enter two valid numbers!');
+    }, 'Please, enter two valid numbers! ');
     this.errorBox.classList.remove('invisible');
     this.errorBox.innerText = fullMessage;
   }
